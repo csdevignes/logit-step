@@ -75,7 +75,7 @@ while colToDelete != "STOP":
         X = X.drop(columns=colToDelete)
 
 resultatFinal = calculSM(X, Y)
-scoresFinal = calculSK(X, Y, cv=50)
+scoresFinal = calculSK(X, Y, cv=Y.value_counts().min())
 print(f'Le modèle choisi est: {X.columns}')
 print(f'sa performance est {scoresFinal.mean()} avec une standard deviation de {scoresFinal.std()}')
 confusion = resultatFinal.pred_table() #Affiche la table de confusion.
