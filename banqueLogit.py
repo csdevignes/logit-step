@@ -1,10 +1,10 @@
 '''
-Ce programme calcule un modèle logistique de prévision des données DECOUVERT à partir des autres données.
-Il évalue ensuite l'efficacité de ce modèle.
-Cours: Mathématiques pour le machine learning.
-Créer un modèle de prévision logistique à partir de ces données qui permet de prévoir découvert.
-Evaluer et sélectionner les variables essentielles et donner la qualité du modèle choisi.
-Faire un compte rendu. Pour le 1er février.
+This program calculate a logistic regression model to predict feature DECOUVERT using other features.
+It allows feature selection using the step backward method.
+Model is recalculated everytime using a minimal crossvalidation with 20% of the data.
+Parameters used for feature selection are p-value, AIC and accuracy.
+It then calculates the accuracy of the final model, with crossvalidation with the maximum number.
+Course: Mathématiques pour le machine learning.
 '''
 import pandas as pd
 import statsmodels.api as sm
